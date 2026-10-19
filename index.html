@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(108, 108, 108);
+      }
+      h1, p {
+        text-align: center;
+      }
+      ul {
+        width: fit-content;
+        margin: 0 auto;
+        text-align: left;
+      }
+      canvas {
+        background-color: black;
+        border: grey solid 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-shell">
+      <h1>Snake</h1>
+      <p>Keys:</p>
+      <ul>
+        <li>Tab: Diagnostics (Dev tools)</li>
+        <li>Space: Pause</li>
+        <li>R: Restart, though only accapeted when gameover true</li>
+      </ul>
+      <pre hidden id="debug" style="
+        position: fixed; top: 10px; left: 10px;
+        color: #0f0; font: 13px monospace;
+        background: rgba(0,0,0,0.7); padding: 8px;
+        pointer-events: none; white-space: pre;"></pre>
+
+      <canvas id="game" width="600" height="600" aria-label="Snake game board"></canvas>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
